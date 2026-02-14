@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Happy Valentine’s Day ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 420px;
+      margin: auto;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+      margin: 15px 0;
+    }
+
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      margin: 8px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #e63950;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card" id="game">
+
+  <!-- STEP 1: WELCOME SCREEN -->
+  <h2>Happy Valentine’s Day Guggi Babuu ❤️</h2>
+
+  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="cute">
+
+  <p>
+    Hey Muffin🤍  
+    I made this little game just for you.  
+    Take your time… no skipping 😌
+  </p>
+
+  <button onclick="step2()">Start 💕</button>
+
+</div>
+
+<script>
+/* STEP 2 */
+function step2() {
+  document.getElementById("game").innerHTML = `
+    <h3>Question 1 💬</h3>
+
+    <!-- EDIT HERE: Image -->
+    <img src="images/Q1.jpg" alt="Q1">
+
+    <!-- EDIT HERE: Question -->
+    <p>What are you to me?</p>
+
+    <button onclick="wrong()">Just a Girlfriend 😏</button>
+    <button onclick="step3()">My safe place ❤️</button>
+  `;
+}
+
+/* STEP 3 */
+function step3() {
+  document.getElementById("game").innerHTML = `
+    <h3>Question 2 🤍</h3>
+<img src="images/Q2.jpg" alt="Q2">
+    
+
+    <!-- EDIT HERE -->
+    <p>When you're upset, what do i do?</p>
+
+    <button onclick="wrong()">Argue back and ignore you🙄</button>
+    <button onclick="step4()">Give space & come back & console you 🤍</button>
+  `;
+}
+
+/* STEP 4 */
+function step4() {
+  document.getElementById("game").innerHTML = `
+    <h3>Question 3 🧠❤️</h3>
+
+    
+<img src="images/Q3.jpg" alt="Q3">
+    
+    <p>What do I love most about you?</p>
+
+    <button onclick="step5()">Your heart, mind & effort, eyes💖</button>
+    <button onclick="wrong()">Your looks only 😌</button>
+  `;
+}
+
+/* STEP 5 – CONFESSION */
+function step5() {
+  document.getElementById("game").innerHTML = `
+    <h2>Pause 🫶</h2>
+
+    
+<img src="images/Q4.jpg" alt="Q4">
+    <!-- EDIT HERE: Long message -->
+    <p>
+      Hey my guggi babu 💖, I just wanted you to know how deeply loved you are by me.
+Even with a little distance between us, you make me feel so connected and calm 🫶.
+I love the way you care, the way you listen, and the quiet understanding we share 🤍.
+You bring warmth into my life in ways I never expected, but now can’t imagine living without 🌸.
+I miss you, muffin 😘 — your presence, your voice, and the comfort of being close to you.
+Every message from you feels like a gentle hug I hold onto 🫂.
+You make ordinary days feel special just by being part of them ✨.
+No matter where we are, my heart always feels safe with you 💕.
+This distance is only temporary, but my love for you is steady and real ❤️.
+Always know that I’m thinking of you, cheering for you, and holding you close in my heart 🌙.
+With all my love and affection, always yours 💖
+    </p>
+
+    <button onclick="step6()">Continue 💌</button>
+  `;
+}
+
+/* STEP 6 – FINAL QUESTION */
+function step6() {
+  document.getElementById("game").innerHTML = `
+    <h2>Final Question 🌹</h2>
+
+    <img src="https://images.unsplash.com/photo-1513279922550-250c2129b13a">
+
+    <!-- EDIT HERE -->
+    <p>Baby, Will you be my  Valentine?</p>
+
+    <button onclick="final()">Yes ❤️</button>
+    <button onclick="final()">Obviously yes 😘</button>
+  `;
+}
+
+/* FINAL SCREEN */
+function final() {
+  document.getElementById("game").innerHTML = `
+    <h1>Yayyy 🎉❤️😁</h1>
+
+    <img src="images/Q4 jpg" alt="Q4">
+
+    <p>
+      ✨ You’ve unlocked a lifetime of love, comfort, and warmth.
+Someone who chooses you every day, stands by you, and holds you close no matter the distance.
+Welcome to my heart — it’s yours, always 💖  
+      <br><br>
+      — Yours, always 💖
+    </p>
+  `;
+}
+
+/* WRONG ANSWER */
+function wrong() {
+  alert("Wrong 😌 But you’re still my favorite human.");
+}
+</script>
+
+</body>
+</html>
